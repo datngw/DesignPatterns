@@ -17,7 +17,7 @@ src/
 │   ├── AbstractFactory/     🔲 Matching product families
 │   ├── Builder/             🔲 Step-by-step custom coffee orders
 │   ├── Prototype/           🔲 Cloning drink recipes
-│   └── Singleton/           🔲 One shared coffee machine / config
+│   └── Singleton/           ✅ One shared coffee machine
 │
 ├── Structural/          # Patterns that deal with object composition
 │   ├── Adapter/             🔲 Third-party payment integration
@@ -51,7 +51,7 @@ src/
 | **Abstract Factory** | Create matching product families (drink + pastry + cup style) | 🔲 Todo |
 | **Builder** | Build a custom coffee step by step (size, milk, syrup, toppings) | 🔲 Todo |
 | **Prototype** | Clone an existing drink recipe as a starting point for variations | 🔲 Todo |
-| **Singleton** | Ensure only one coffee machine instance manages the brewing queue | 🔲 Todo |
+| **Singleton** | Ensure only one coffee machine instance manages the brewing queue | ✅ Done |
 
 ### Structural
 
