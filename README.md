@@ -15,7 +15,7 @@ src/
 ├── Creational/          # Patterns that deal with object creation
 │   ├── FactoryMethod/       ✅ Coffee factories (Espresso, Latte, etc.)
 │   ├── AbstractFactory/     🔲 Matching product families
-│   ├── Builder/             🔲 Step-by-step custom coffee orders
+│   ├── Builder/             ✅ Step-by-step custom coffee orders
 │   ├── Prototype/           🔲 Cloning drink recipes
 │   └── Singleton/           ✅ One shared coffee machine
 │
@@ -49,7 +49,7 @@ src/
 |---------|---------------------|--------|
 | **Factory Method** | A coffee factory creates specific drinks based on the factory type | ✅ Done |
 | **Abstract Factory** | Create matching product families (drink + pastry + cup style) | 🔲 Todo |
-| **Builder** | Build a custom coffee step by step (size, milk, syrup, toppings) | 🔲 Todo |
+| **Builder** | Build a custom coffee step by step (size, milk, syrup, toppings) | ✅ Done |
 | **Prototype** | Clone an existing drink recipe as a starting point for variations | 🔲 Todo |
 | **Singleton** | Ensure only one coffee machine instance manages the brewing queue | ✅ Done |
 
