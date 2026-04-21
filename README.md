@@ -1,5 +1,9 @@
 # Design Patterns - Coffee Shop Edition
 
+<p align="center">
+  <img src="assets/design-patterns-banner.png" alt="Design Patterns - Coffee Shop Edition" width="600">
+</p>
+
 A hands-on project for learning the 23 classic GoF (Gang of Four) design patterns using **C# / .NET 9**, with examples grounded in a **coffee shop** domain.
 
 Each pattern lives in its own folder with clear documentation, real-world analogies, and runnable code.
