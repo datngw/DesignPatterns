@@ -15,19 +15,17 @@ Console.WriteLine("  10. Visitor");
 Console.Write("\nSelect a pattern to run: ");
 var choice = Console.ReadLine();
 
-// TODO: Uncomment and implement as you go:
-//
-// switch (choice)
-// {
-//     case "1":  ChainOfResponsibility.Demo.Run(); break;
-//     case "2":  Command.Demo.Run(); break;
-//     case "3":  Iterator.Demo.Run(); break;
-//     case "4":  Mediator.Demo.Run(); break;
-//     case "5":  Memento.Demo.Run(); break;
-//     case "6":  Observer.Demo.Run(); break;
-//     case "7":  State.Demo.Run(); break;
-//     case "8":  Strategy.Demo.Run(); break;
-//     case "9":  TemplateMethod.Demo.Run(); break;
-//     case "10": Visitor.Demo.Run(); break;
-//     default:   Console.WriteLine("Invalid selection."); break;
-// }
+switch (choice)
+{
+    case "1":  Console.WriteLine("Chain of Responsibility is not implemented yet."); break;
+    case "2":  Console.WriteLine("Command is not implemented yet."); break;
+    case "3":  Console.WriteLine("Iterator is not implemented yet."); break;
+    case "4":  Console.WriteLine("Mediator is not implemented yet."); break;
+    case "5":  Console.WriteLine("Memento is not implemented yet."); break;
+    case "6":  Console.WriteLine("Observer is not implemented yet."); break;
+    case "7":  Console.WriteLine("State is not implemented yet."); break;
+    case "8":  Console.WriteLine("Strategy is not implemented yet."); break;
+    case "9":  Console.WriteLine("Template Method is not implemented yet."); break;
+    case "10": Console.WriteLine("Visitor is not implemented yet."); break;
+    default:   Console.WriteLine("Invalid selection."); break;
+}
