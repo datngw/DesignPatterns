@@ -65,38 +65,38 @@ src/
 
 | Pattern              | Coffee Shop Scenario                                               | Status  |
 | -------------------- | ------------------------------------------------------------------ | ------- |
-| **Factory Method**   | A coffee factory creates specific drinks based on the factory type | ✅ Done |
-| **Abstract Factory** | Create matching product families (drink + pastry + cup style)      | 🔲 Todo |
-| **Builder**          | Build a custom coffee step by step (size, milk, syrup, toppings)   | ✅ Done |
-| **Prototype**        | Clone an existing drink recipe as a starting point for variations  | 🔲 Todo |
-| **Singleton**        | Ensure only one coffee machine instance manages the brewing queue  | ✅ Done |
+| [**Factory Method**](src/Creational/FactoryMethod)   | A coffee factory creates specific drinks based on the factory type | ✅ Done |
+| [**Abstract Factory**](src/Creational/AbstractFactory) | Create matching product families (drink + pastry + cup style)      | 🔲 Todo |
+| [**Builder**](src/Creational/Builder)          | Build a custom coffee step by step (size, milk, syrup, toppings)   | ✅ Done |
+| [**Prototype**](src/Creational/Prototype)        | Clone an existing drink recipe as a starting point for variations  | 🔲 Todo |
+| [**Singleton**](src/Creational/Singleton)        | Ensure only one coffee machine instance manages the brewing queue  | ✅ Done |
 
 ### Structural
 
 | Pattern       | Coffee Shop Scenario                                                  | Status  |
 | ------------- | --------------------------------------------------------------------- | ------- |
-| **Adapter**   | Integrate a third-party payment provider into the existing system     | 🔲 Todo |
-| **Bridge**    | Decouple brewing method (espresso machine, pour-over) from drink type | 🔲 Todo |
-| **Composite** | Treat single drinks and combo meals uniformly in the menu             | 🔲 Todo |
-| **Decorator** | Dynamically add milk, syrup, whipped cream on top of a base drink     | 🔲 Todo |
-| **Facade**    | Provide a simple `OrderCoffee()` method hiding the complex subsystem  | 🔲 Todo |
-| **Flyweight** | Share immutable drink base templates to reduce memory                 | 🔲 Todo |
-| **Proxy**     | Control access to premium/specialty drinks                            | 🔲 Todo |
+| [**Adapter**](src/Structural/Adapter)   | Integrate a third-party payment provider into the existing system     | 🔲 Todo |
+| [**Bridge**](src/Structural/Bridge)    | Decouple brewing method (espresso machine, pour-over) from drink type | 🔲 Todo |
+| [**Composite**](src/Structural/Composite) | Treat single drinks and combo meals uniformly in the menu             | 🔲 Todo |
+| [**Decorator**](src/Structural/Decorator) | Dynamically add milk, syrup, whipped cream on top of a base drink     | 🔲 Todo |
+| [**Facade**](src/Structural/Facade)    | Provide a simple `OrderCoffee()` method hiding the complex subsystem  | 🔲 Todo |
+| [**Flyweight**](src/Structural/Flyweight) | Share immutable drink base templates to reduce memory                 | 🔲 Todo |
+| [**Proxy**](src/Structural/Proxy)     | Control access to premium/specialty drinks                            | 🔲 Todo |
 
 ### Behavioral
 
 | Pattern                     | Coffee Shop Scenario                                                  | Status  |
 | --------------------------- | --------------------------------------------------------------------- | ------- |
-| **Chain of Responsibility** | Pass an order through validation steps (stock check → payment → brew) | 🔲 Todo |
-| **Command**                 | Encapsulate orders as objects for queuing, undo, and redo             | 🔲 Todo |
-| **Iterator**                | Traverse the menu without exposing its internal structure             | 🔲 Todo |
-| **Mediator**                | Centralize communication between barista, cashier, and display        | 🔲 Todo |
-| **Memento**                 | Save and restore an order's state (e.g., customer changes their mind) | 🔲 Todo |
-| **Observer**                | Notify customers when their order is ready                            | 🔲 Todo |
-| **State**                   | Change behavior as an order moves through its lifecycle               | 🔲 Todo |
-| **Strategy**                | Swap pricing algorithms (regular, happy hour, loyalty discount)       | 🔲 Todo |
-| **Template Method**         | Define the brewing skeleton; subclasses customize specific steps      | 🔲 Todo |
-| **Visitor**                 | Apply operations (tax, discount, nutritional info) across menu items  | 🔲 Todo |
+| [**Chain of Responsibility**](src/Behavioral/ChainOfResponsibility) | Pass an order through validation steps (stock check → payment → brew) | 🔲 Todo |
+| [**Command**](src/Behavioral/Command)                 | Encapsulate orders as objects for queuing, undo, and redo             | 🔲 Todo |
+| [**Iterator**](src/Behavioral/Iterator)                | Traverse the menu without exposing its internal structure             | 🔲 Todo |
+| [**Mediator**](src/Behavioral/Mediator)                | Centralize communication between barista, cashier, and display        | 🔲 Todo |
+| [**Memento**](src/Behavioral/Memento)                 | Save and restore an order's state (e.g., customer changes their mind) | 🔲 Todo |
+| [**Observer**](src/Behavioral/Observer)                | Notify customers when their order is ready                            | 🔲 Todo |
+| [**State**](src/Behavioral/State)                   | Change behavior as an order moves through its lifecycle               | 🔲 Todo |
+| [**Strategy**](src/Behavioral/Strategy)                | Swap pricing algorithms (regular, happy hour, loyalty discount)       | 🔲 Todo |
+| [**Template Method**](src/Behavioral/TemplateMethod)         | Define the brewing skeleton; subclasses customize specific steps      | 🔲 Todo |
+| [**Visitor**](src/Behavioral/Visitor)                 | Apply operations (tax, discount, nutritional info) across menu items  | 🔲 Todo |
 
 ## Getting Started
 
