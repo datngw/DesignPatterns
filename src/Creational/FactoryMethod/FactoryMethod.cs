@@ -10,8 +10,10 @@ namespace DesignPatterns.Creational.FactoryMethod;
 ///   - When a class can't anticipate the class of objects it must create
 ///   - When a class wants its subclasses to specify the objects it creates
 ///
-/// Real-world analogy: A logistics company delivering by truck vs. sea —
-/// the delivery method is decided by the type of logistics.
+/// Real-world analogy: A coffee shop franchise where each branch specializes
+/// in a different drink — you walk into an EspressoBar and get an espresso,
+/// or a LatteBar and get a latte. Each branch (subclass) decides which specific
+/// drink to create, while the ordering process stays the same everywhere.
 /// </summary>
 
 // TODO: Implement Factory Method
