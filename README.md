@@ -5,6 +5,7 @@
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/github/actions/workflow/status/datngw/DesignPatterns/build.yml?branch=master&logo=github" alt="Build">
   <img src="https://img.shields.io/badge/.NET-9.0-512BD4?logo=dotnet" alt=".NET 9">
   <img src="https://img.shields.io/badge/C%23-13.0-239120?logo=csharp" alt="C# 13">
   <img src="https://img.shields.io/badge/patterns-3%20%2F%2023-blue" alt="3 of 23 patterns">
