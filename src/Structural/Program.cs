@@ -1,3 +1,5 @@
+using DesignPatterns.Structural.Adapter;
+
 Console.WriteLine("=== Structural Design Patterns ===\n");
 
 Console.WriteLine("Patterns available:");
@@ -12,16 +14,14 @@ Console.WriteLine("  7. Proxy");
 Console.Write("\nSelect a pattern to run: ");
 var choice = Console.ReadLine();
 
-// TODO: Uncomment and implement as you go:
-//
-// switch (choice)
-// {
-//     case "1": Adapter.Demo.Run(); break;
-//     case "2": Bridge.Demo.Run(); break;
-//     case "3": Composite.Demo.Run(); break;
-//     case "4": Decorator.Demo.Run(); break;
-//     case "5": Facade.Demo.Run(); break;
-//     case "6": Flyweight.Demo.Run(); break;
-//     case "7": Proxy.Demo.Run(); break;
-//     default: Console.WriteLine("Invalid selection."); break;
-// }
+switch (choice)
+{
+    case "1": Adapter.Run(); break;
+    case "2": Console.WriteLine("Bridge is not implemented yet."); break;
+    case "3": Console.WriteLine("Composite is not implemented yet."); break;
+    case "4": Console.WriteLine("Decorator is not implemented yet."); break;
+    case "5": Console.WriteLine("Facade is not implemented yet."); break;
+    case "6": Console.WriteLine("Flyweight is not implemented yet."); break;
+    case "7": Console.WriteLine("Proxy is not implemented yet."); break;
+    default: Console.WriteLine("Invalid selection."); break;
+}

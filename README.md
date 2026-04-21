@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/github/actions/workflow/status/datngw/DesignPatterns/build.yml?branch=master&logo=github" alt="Build">
   <img src="https://img.shields.io/badge/.NET-9.0-512BD4?logo=dotnet" alt=".NET 9">
   <img src="https://img.shields.io/badge/C%23-13.0-239120?logo=csharp" alt="C# 13">
-  <img src="https://img.shields.io/badge/patterns-3%20%2F%2023-blue" alt="3 of 23 patterns">
+  <img src="https://img.shields.io/badge/patterns-4%20%2F%2023-blue" alt="4 of 23 patterns">
   <img src="https://img.shields.io/badge/license-MIT-green" alt="MIT License">
 </p>
 
@@ -38,7 +38,7 @@ src/
 │   └── Singleton/           ✅ One shared coffee machine
 │
 ├── Structural/          # Patterns that deal with object composition
-│   ├── Adapter/             🔲 Third-party payment integration
+│   ├── Adapter/             ✅ Third-party payment integration
 │   ├── Bridge/              🔲 Abstraction for brewing methods vs. drink types
 │   ├── Composite/           🔲 Menu groups (combos, meal deals)
 │   ├── Decorator/           🔲 Toppings and add-ons (milk, syrup, whip)
@@ -75,7 +75,7 @@ src/
 
 | Pattern       | Coffee Shop Scenario                                                  | Status  |
 | ------------- | --------------------------------------------------------------------- | ------- |
-| [**Adapter**](src/Structural/Adapter)   | Integrate a third-party payment provider into the existing system     | 🔲 Todo |
+| [**Adapter**](src/Structural/Adapter)   | Integrate a third-party payment provider into the existing system     | ✅ Done |
 | [**Bridge**](src/Structural/Bridge)    | Decouple brewing method (espresso machine, pour-over) from drink type | 🔲 Todo |
 | [**Composite**](src/Structural/Composite) | Treat single drinks and combo meals uniformly in the menu             | 🔲 Todo |
 | [**Decorator**](src/Structural/Decorator) | Dynamically add milk, syrup, whipped cream on top of a base drink     | 🔲 Todo |
