@@ -25,43 +25,6 @@ Learning design patterns from textbooks often feels dry — UML diagrams and abs
 - **Runnable code** — clone, run, and interact with each pattern immediately
 - **Per-pattern docs** — each pattern has its own README with analogy, diagram, and when to use it
 
-## Demo
-
-```
-$ dotnet run --project src/Creational
-
-=== Creational Design Patterns ===
-
-Patterns available:
-  1. FactoryMethod
-  2. Singleton
-
-Select a pattern to run: 1
-
-Ordered a Espresso
-Brewing an Espresso...
-Espresso is ready!
-
-Ordered a Latte
-Brewing a Latte...
-Latte is ready!
-```
-
-```
-$ dotnet run --project src/Creational
-
-Select a pattern to run: 2
-
-Same instance? True
-Machine: Breville Barista Express
-
-[Breville Barista Express] Brewing #1: Espresso
-[Breville Barista Express] Brewing #2: Latte
-[Breville Barista Express] Brewing #3: Cappuccino
-
-Total orders processed: 3
-```
-
 ## Project Structure
 
 ```
