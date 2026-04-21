@@ -25,26 +25,50 @@ Define a method (`CreateCoffee`) in a base class that subclasses override to pro
 
 ## Class Diagram
 
-```
-┌─────────────────────┐           ┌──────────────┐
-│    «abstract»        │           │ «interface»  │
-│    CoffeeFactory     │           │   ICoffee    │
-├─────────────────────┤           ├──────────────┤
-│ + CreateCoffee()    │──────────▶│ + GetName()  │
-│ + OrderCoffee()     │  creates  │ + Brew()     │
-└────────┬────────────┘           └──────┬───────┘
-         │                               │
-    extends                         implements
-         │                               │
-    ┌────┴────┐                    ┌─────┴─────┐
-    │         │                    │           │
-┌───┴───┐ ┌──┴───┐           ┌────┴───┐ ┌────┴───┐
-│Espresso│ │Latte │           │Espresso│ │ Latte  │
-│Factory │ │Factory│           │        │ │        │
-├────────┤├───────┤           ├────────┤ ├────────┤
-│+Create ││+Create│           │+GetName│ │+GetName│
-│Coffee()││Coffee│()          │+Brew() │ │+Brew() │
-└────────┘└───────┘           └────────┘ └────────┘
+```mermaid
+classDiagram
+    class CoffeeFactory {
+        <<abstract>>
+        +CreateCoffee() ICoffee
+        +OrderCoffee() void
+    }
+
+    class EspressoFactory {
+        +CreateCoffee() ICoffee
+    }
+
+    class LatteFactory {
+        +CreateCoffee() ICoffee
+    }
+
+    class ICoffee {
+        <<interface>>
+        +GetName() string
+        +Brew() void
+    }
+
+    class Espresso {
+        +GetName() string
+        +Brew() void
+    }
+
+    class Latte {
+        +GetName() string
+        +Brew() void
+    }
+
+    CoffeeFactory <|-- EspressoFactory : extends
+    CoffeeFactory <|-- LatteFactory : extends
+    ICoffee <|.. Espresso : implements
+    ICoffee <|.. Latte : implements
+    CoffeeFactory ..> ICoffee : creates
+
+    style CoffeeFactory fill:#D4A574,stroke:#8B5E3C,color:#3E2723
+    style EspressoFactory fill:#FFCCBC,stroke:#FF5722,color:#BF360C
+    style LatteFactory fill:#FFE0B2,stroke:#FF9800,color:#E65100
+    style ICoffee fill:#A8D5BA,stroke:#4CAF50,color:#1B5E20
+    style Espresso fill:#FFCCBC,stroke:#FF5722,color:#BF360C
+    style Latte fill:#FFE0B2,stroke:#FF9800,color:#E65100
 ```
 
 **How to read it:** `CoffeeFactory` declares the factory method `CreateCoffee()`. Each concrete factory overrides it to return a specific coffee. The client only talks to `CoffeeFactory` — it never knows (or cares) which concrete product it gets.

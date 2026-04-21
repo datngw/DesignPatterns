@@ -23,25 +23,22 @@ Make the constructor **private** so nobody can call `new`. Provide a **static me
 
 ## Class Diagram
 
-```
-┌──────────────────────────────┐
-│        CoffeeMachine         │
-├──────────────────────────────┤
-│ - _instance: CoffeeMachine   │
-│ - _lock: object              │
-│ + Name: string               │
-│ + OrdersProcessed: int       │
-├──────────────────────────────┤
-│ - CoffeeMachine()            │  ← private constructor
-│ + GetInstance(): CoffeeMachine│  ← static, thread-safe
-│ + Brew(drink: string): void  │
-└──────────────────────────────┘
-          │
-          │ always returns the same instance
-          ▼
-     ┌─────────┐
-     │ Instance │  (one and only)
-     └─────────┘
+```mermaid
+classDiagram
+    class CoffeeMachine {
+        <<Singleton>>
+        -CoffeeMachine _instance$
+        -object _lock$
+        +string Name
+        +int OrdersProcessed
+        -CoffeeMachine()
+        +GetInstance()$ CoffeeMachine
+        +Brew(string drink) void
+    }
+
+    CoffeeMachine ..> CoffeeMachine : always returns same instance
+
+    style CoffeeMachine fill:#D4A574,stroke:#8B5E3C,color:#3E2723
 ```
 
 **How to read it:** `CoffeeMachine` hides its constructor and exposes `GetInstance()`. The first call creates the instance; every call after returns it. External code can never create a second one.

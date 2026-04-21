@@ -23,32 +23,49 @@ Create a **builder** class with fluent methods — one for each part of the obje
 
 ## Class Diagram
 
-```
-┌──────────────┐       ┌───────────────────┐
-│    Coffee     │       │  «interface»      │
-│   (Product)   │       │  ICoffeeBuilder   │
-├──────────────┤       ├───────────────────┤
-│ + Size        │◀──────│ + SetSize()       │
-│ + Milk        │ builds│ + AddMilk()       │
-│ + Syrup       │       │ + AddSyrup()      │
-│ + Toppings    │       │ + AddTopping()    │
-│ + ShowDetails()│       │ + Build(): Coffee │
-└──────────────┘       └────────┬──────────┘
-                                │
-                           implements
-                                │
-                    ┌───────────┴───────────┐
-                    │                       │
-              ┌─────┴──────┐        ┌───────┴────────┐
-              │CoffeeBuilder│        │ CoffeeDirector │
-              ├────────────┤        │   (optional)   │
-              │ - _coffee  │        ├────────────────┤
-              │ + SetSize()│        │ + MakeCappuccino│
-              │ + AddMilk()│        │ + MakeLatte()  │
-              │ + AddSyrup││        └────────────────┘
-              │ + AddTopp. │    uses builder to create
-              │ + Build()  │    predefined drinks
-              └────────────┘
+```mermaid
+classDiagram
+    class Coffee {
+        <<Product>>
+        +string Size
+        +string Milk
+        +string Syrup
+        +List~string~ Toppings
+        +ShowDetails() void
+    }
+
+    class ICoffeeBuilder {
+        <<interface>>
+        +SetSize(string size) ICoffeeBuilder
+        +AddMilk(string milk) ICoffeeBuilder
+        +AddSyrup(string syrup) ICoffeeBuilder
+        +AddTopping(string topping) ICoffeeBuilder
+        +Build() Coffee
+    }
+
+    class CoffeeBuilder {
+        -Coffee _coffee
+        +SetSize(string size) ICoffeeBuilder
+        +AddMilk(string milk) ICoffeeBuilder
+        +AddSyrup(string syrup) ICoffeeBuilder
+        +AddTopping(string topping) ICoffeeBuilder
+        +Build() Coffee
+    }
+
+    class CoffeeDirector {
+        <<optional>>
+        +MakeCappuccino(ICoffeeBuilder builder) Coffee
+        +MakeLatte(ICoffeeBuilder builder) Coffee
+    }
+
+    ICoffeeBuilder <|.. CoffeeBuilder : implements
+    CoffeeBuilder ..> Coffee : builds
+    CoffeeDirector ..> ICoffeeBuilder : uses
+
+    style Coffee fill:#D4A574,stroke:#8B5E3C,color:#3E2723
+    style ICoffeeBuilder fill:#A8D5BA,stroke:#4CAF50,color:#1B5E20
+    style CoffeeBuilder fill:#FFE0B2,stroke:#FF9800,color:#E65100
+    style CoffeeDirector fill:#B3E5FC,stroke:#03A9F4,color:#01579B
 ```
 
 **How to read it:** `ICoffeeBuilder` defines the step-by-step interface. `CoffeeBuilder` implements each step and assembles a `Coffee`. `CoffeeDirector` (optional) wraps common recipes — it uses a builder internally so the client gets a preset drink without knowing the steps.
