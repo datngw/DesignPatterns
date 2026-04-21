@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Behavioral/">
+    <Project Path="src/Behavioral/DesignPatterns.Behavioral.csproj" />
+  </Folder>
+  <Folder Name="/src/Creational/">
+    <Project Path="src/Creational/DesignPatterns.Creational.csproj" />
+  </Folder>
+  <Folder Name="/src/Structural/">
+    <Project Path="src/Structural/DesignPatterns.Structural.csproj" />
+  </Folder>
+</Solution>

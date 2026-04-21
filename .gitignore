@@ -1,0 +1,30 @@
+## Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+[Bb]in/
+[Oo]bj/
+
+## NuGet
+**/[Pp]ackages/*
+*.nupkg
+
+## IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+## OS files
+Thumbs.db
+.DS_Store
+
+## Claude Code local settings
+.claude/settings.local.json
